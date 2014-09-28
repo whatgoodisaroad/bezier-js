@@ -8,7 +8,7 @@ a quadratic Bezier) might be initialized in the following way:
 
 ## Methods
 
-### `Bezier([...])`: Constructor
+#### `new Bezier([...])`: Constructor
 
 Accepts a list of control points, each represented as a vector.
 
@@ -35,11 +35,11 @@ being a vector of length 4:
 
 Note: It will break if vectors of varying lengths are provided.
 
-### `curve.setPoints([...])`: Set the list of control points
+#### `curve.setPoints([...])`: Set the list of control points
 
 Set the list of control points on an existing Bezier curve object.
 
-### `curve.setPoint(index, [...])`: Set a specific control point
+#### `curve.setPoint(index, [...])`: Set a specific control point
 
 Redefine a specific control point of an existing Bezier curve object, identified
 by its index in the control point list. For example, we can change the middle 
@@ -49,7 +49,7 @@ control point of the 2-dimensional quadratic Bezier example from above:
 
     curve.setPoint(1, [ 0.25, 0.75 ]);
 
-### `curve.b_t(t)`: Compute the point along the curve for some `t` value
+#### `curve.b_t(t)`: Compute the point along the curve for some `t` value
 
 This is the parametric interface to the Bezier curve. To find the points along
 the curve, collect the points produced by `b_t` for some sequence of `t` values 
@@ -68,7 +68,7 @@ with a resolution of 100, one could write the following:
 Each point returned by `b_t` will be a vector of the same dimensionality as the 
 original curve.
 
-### `curve.differential_t(t)`: Compute the differential vector for some `t` value
+#### `curve.differential_t(t)`: Compute the differential vector for some `t` value
 
 Parametric function to compute a vector representing the infinitesimal rates of 
 change of each dimension at some `t` value between `0` and `1`.
@@ -79,7 +79,7 @@ For example, the differential vector for some n-dimensional curve at some value
     curve.differential_t(t)
       // ==> [ dx_1, dx_2, ..., dx_n ]
 
-### `curve.derivative_t(ix, iy, t)`: Compute the derivative for two variables for some `t` value
+#### `curve.derivative_t(ix, iy, t)`: Compute the derivative for two variables for some `t` value
 
 For example, in 2 dimensions, if we have x_1 is x and x_2 is y, then dy/dx at 
 `t` is `curve.derivative_t(0, 1, t)`
@@ -90,7 +90,7 @@ vector. The components are identified by the indices provided in the `ix` and
 
 Will error when slope is infinite because `dx` will be zero.
 
-### `curve.approximate(ix, iy, x0)`: Approximate the components of a 2-dimensional curve
+#### `curve.approximate(ix, iy, x0)`: Approximate the components of a 2-dimensional curve
 
 Assuming that the curve is 2-dimensional, create an approximation of a function 
 interface. Insofar as Bezier curves are inherently parametric (i.e. along the 
@@ -104,7 +104,7 @@ For example, if the curve is meant to approximate *y = f(x)*, where `x_1` is
 This function uses a bijective approximation method with a certain number of 
 refinement iterations.
 
-### `curve.setRefinementIterations(n)`: Change the number of bijection iterations
+#### `curve.setRefinementIterations(n)`: Change the number of bijection iterations
 
 Change the number of iterations the bijective approximator will undergo before
 yielding a value. By default it is set to 10, but this may need to change 
@@ -113,7 +113,7 @@ and how much speed is needed.
 
 Larger numbers mean greater precision and slower performance. 
 
-### `curve.y_x(x)` and `curve.x_y(y)`: Approximation shorthand
+#### `curve.y_x(x)` and `curve.x_y(y)`: Approximation shorthand
 
 Shorthand for the two 2-dimensional approximation scenarios (i.e. approximate
 *y* for *x* or approximate *x* for *y*).
