@@ -4,11 +4,14 @@
 // 
 // The approximate function inspired by 
 // http://www.flong.com/texts/code/shapers_bez/
-
+//
 // Create a bezier function with a list of points. Each point must me a vector
 // of its coordinates. All such vectors should have the same cardinality.
 // 
 // e.g new Bezier([ [0, 0], [0.75, 0.25], [1, 1] ])
+//
+// github.com/whatgoodisaroad/bezier-js
+//
 function Bezier(points) {
   points = points;
 

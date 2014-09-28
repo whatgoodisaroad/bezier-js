@@ -99,7 +99,7 @@ interface. Insofar as Bezier curves are inherently parametric (i.e. along the
 no infinite slopes).
 
 For example, if the curve is meant to approximate *y = f(x)*, where `x_1` is
-*x* and `x_2` is *y*, then *y = f(x) ~=* `curve.approximate(0, 1, x)`.
+*x* and `x_2` is *y*, then *y = f(x) ≈* `curve.approximate(0, 1, x)`.
 
 This function uses a bijective approximation method with a certain number of 
 refinement iterations.
