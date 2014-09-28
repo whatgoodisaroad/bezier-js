@@ -127,5 +127,5 @@ Shorthand for the two 2-dimensional approximation scenarios (i.e. approximate
 
 ## Where Credit is Due
 
-* All the necessary math is conveniently here: http://en.wikipedia.org/wiki/B%C3%A9zier_curve#Generalization
-* The approximator adapted from http://www.flong.com/texts/code/shapers_bez/
+* All the necessary math is conveniently here: [Wikipedia](http://en.wikipedia.org/wiki/B%C3%A9zier_curve#Generalization)
+* The approximator adapted from [here](http://www.flong.com/texts/code/shapers_bez/)
