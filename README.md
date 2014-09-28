@@ -1,8 +1,8 @@
 # bezier-js
 
-A Bezier curve calculator and approximator for any degree and any 
-dimensionality. For example, a 2-dimensional Bezier curve of three points (i.e. 
-a quadratic Bezier) might be initialized in the following way:
+A Bézier curve calculator and approximator for any degree and any 
+dimensionality. For example, a 2-dimensional Bézier curve of three points (i.e. 
+a quadratic Bézier) might be initialized in the following way:
 
     var curve = new Bezier([ [0, 0], [0.75, 0.25], [1, 1] ]);
 
@@ -12,7 +12,7 @@ a quadratic Bezier) might be initialized in the following way:
 
 Accepts a list of control points, each represented as a vector.
 
-For example, to define a 2-dimensional cubic Bezier, provide a list of 4 control 
+For example, to define a 2-dimensional cubic Bézier, provide a list of 4 control 
 points, each control point being a vector of length 2.
 
     var curve = new Bezier([
@@ -22,7 +22,7 @@ points, each control point being a vector of length 2.
       [x_3, y_3]
     ]);
 
-For a 4-dimensional quartic Bezier, provide a list of 5 control points, each 
+For a 4-dimensional quartic Bézier, provide a list of 5 control points, each 
 being a vector of length 4:
 
     var curve = new Bezier([ 
@@ -37,13 +37,13 @@ Note: It will break if vectors of varying lengths are provided.
 
 #### `curve.setPoints([...])`: Set the list of control points
 
-Set the list of control points on an existing Bezier curve object.
+Set the list of control points on an existing Bézier curve object.
 
 #### `curve.setPoint(index, [...])`: Set a specific control point
 
-Redefine a specific control point of an existing Bezier curve object, identified
+Redefine a specific control point of an existing Bézier curve object, identified
 by its index in the control point list. For example, we can change the middle 
-control point of the 2-dimensional quadratic Bezier example from above:
+control point of the 2-dimensional quadratic Bézier example from above:
 
     var curve = new Bezier([ [0, 0], [0.75, 0.25], [1, 1] ]);
 
@@ -51,7 +51,7 @@ control point of the 2-dimensional quadratic Bezier example from above:
 
 #### `curve.b_t(t)`: Compute the point along the curve for some `t` value
 
-This is the parametric interface to the Bezier curve. To find the points along
+This is the parametric interface to the Bézier curve. To find the points along
 the curve, collect the points produced by `b_t` for some sequence of `t` values 
 between `0` and `1`.
 
@@ -93,7 +93,7 @@ Will error when slope is infinite because `dx` will be zero.
 #### `curve.approximate(ix, iy, x0)`: Approximate the components of a 2-dimensional curve
 
 Assuming that the curve is 2-dimensional, create an approximation of a function 
-interface. Insofar as Bezier curves are inherently parametric (i.e. along the 
+interface. Insofar as Bézier curves are inherently parametric (i.e. along the 
 `t` parameter) one might want to use a curve like it was a 2-d function 
 (assuming that the curve is 2-dimensional, and is function-like in that it has 
 no infinite slopes).
